@@ -1,0 +1,106 @@
+tabs:
+  forms:
+    display: 'Forms Config'
+    sections:
+      -
+        fields:
+          - 
+            handle: forms
+            field:
+              fields:
+                -
+                  handle: form
+                  field:
+                    display: Form
+                    type: form
+                    max_items: 1
+                    mode: select
+                    width: 50
+                    instructions: 'Select the form to configure the auto-reply for.'
+                    validate: 'required'
+                - 
+                  handle: 'auto_reply_subject'
+                  field:
+                    type: 'text'
+                    display: 'Auto-Reply Subject'
+                    width: 50
+                    instructions: 'Enter the subject line of the auto-reply email.'
+                    validate: 'required'
+                -
+                  handle: email_field
+                  field:
+                    display: 'Email Field'
+                    type: 'form_fields'
+                    max_items: 1
+                    default: email
+                    width: 50
+                    instructions: 'Select the Email field handle for auto-reply.'
+                    validate: 'required'
+                -
+                  handle: name_field
+                  field:
+                    display: 'Name Field'
+                    type: 'form_fields'
+                    max_items: 1
+                    width: 50
+                    instructions: 'Select the Name field for auto-reply. (Optional)'
+                - 
+                  handle: 'auto_reply_message'
+                  field:
+                    type: 'textarea'
+                    display: 'Auto-Reply Message'
+                    width: 100
+                    instructions: 'Enter the body of the auto-reply email.'
+                    validate: 'required'
+                - 
+                  handle: 'sender_name'
+                  field:
+                    type: 'text'
+                    display: 'Sender Name'
+                    width: 50
+                    instructions: 'Enter the name that will appear in the "From" field of the email.'
+                    validate: 'required'
+                - 
+                  handle: 'sender_email'
+                  field:
+                    type: 'text'
+                    display: 'Sender Email'
+                    width: 50
+                    instructions: 'Enter the sender email address.'
+                    validate: 'required'
+                - 
+                  handle: 'auto_reply_enabled'
+                  field:
+                    type: 'toggle'
+                    display: 'Auto-Reply Enabled'
+                    width: 50
+                    instructions: 'Toggle to enable or disable auto-reply for this form.'
+                    validate: 'required'
+                - 
+                  handle: 'include_body'
+                  field:
+                    type: 'toggle'
+                    display: 'Include Email Body'
+                    width: 50
+                    instructions: 'Toggle to include email body within the auto reply'
+                - 
+                  handle: 'include_submission_number'
+                  field:
+                    type: 'toggle'
+                    display: 'Include Submission Number'
+                    width: 50
+                    instructions: 'Toggle to include email body within the auto reply'
+                - 
+                  handle: 'attachment'
+                  field:
+                    type: 'assets'
+                    display: 'Attachment'
+                    max_files: 1
+                    width: 50
+                    instructions: 'Optional file to attach to the auto-reply email.'
+              display: ' '
+              type: grid
+              mode: stacked
+              add_row: 'Add Form'
+              instructions: 'Add the forms you want to send auto-reply.'
+  

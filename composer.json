@@ -1,0 +1,30 @@
+{
+    "name": "thirtybittech/autoreply",
+    "autoload": {
+        "psr-4": {
+            "ThirtyBitTech\\Autoreply\\": "src"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "edalzell/forma": "^3.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Autoreply",
+            "description": "AutoReply enables automatic email responses for submitted forms, ensuring timely engagement and consistent communication with users."
+        },
+        "laravel": {
+            "providers": [
+                "ThirtyBitTech\\Autoreply\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
