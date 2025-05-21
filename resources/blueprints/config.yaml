@@ -89,7 +89,7 @@ tabs:
                     type: 'toggle'
                     display: 'Include Submission Number'
                     width: 50
-                    instructions: 'Toggle to include email body within the auto reply'
+                    instructions: 'Toggle to include email body within the auto reply. Note: Make sure to create a field with ‘random_id’ as the handle.'
                 - 
                   handle: 'attachment'
                   field:

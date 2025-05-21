@@ -1,5 +1,16 @@
 {
     "name": "thirtybittech/autoreply",
+    "type": "statamic-addon",
+    "version": "dev-fix/navigation-click-error",
+    "description": "AutoReply enables automatic email responses for submitted forms, ensuring timely engagement and consistent communication with users.",
+    "authors": [
+        {
+            "name": "30Bit Tech",
+            "email": "contact@30-bit.com",
+            "homepage": "https://30-bit.com",
+            "role": "Founder"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "ThirtyBitTech\\Autoreply\\": "src"
@@ -7,7 +18,7 @@
     },
     "require": {
         "php": "^8.1",
-        "edalzell/forma": "^3.0"
+        "edalzell/forma": "^3.1"
     },
     "config": {
         "allow-plugins": {
