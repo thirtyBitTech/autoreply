@@ -6,6 +6,7 @@ use Statamic\Providers\AddonServiceProvider;
 use Statamic\Statamic;
 use Illuminate\Support\Facades\Artisan;
 use Edalzell\Forma\Forma;
+use Edalzell\Forma\ConfigController;
 use Statamic\Events\FormSubmitted;
 use ThirtyBitTech\Autoreply\Listeners\SendAutoreply;
 use ThirtyBitTech\Autoreply\Fieldtypes\FormFields;
@@ -47,7 +48,9 @@ class ServiceProvider extends AddonServiceProvider
 
     private function createNavigation(): void
     {
-        Forma::add('thirtybittech/autoreply');
+        // Forma::add('thirtybittech/autoreply');
+        \Edalzell\Forma\Forma::add('thirtybittech/autoreply', ConfigController::class, 'autoreply');
+
     }
 
     private function mergeConfigurations() : void
