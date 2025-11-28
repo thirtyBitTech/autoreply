@@ -95,6 +95,7 @@ tabs:
                   field:
                     type: 'assets'
                     display: 'Attachment'
+                    container: assets
                     max_files: 1
                     width: 50
                     instructions: 'Optional file to attach to the auto-reply email.'
