@@ -29,6 +29,29 @@ class SendAutoreply
         if ($config) {    
             foreach ($config as $formConfig) {
                 if ($formConfig['form'] === $form->handle() && $formConfig['auto_reply_enabled']) {
+                    
+                    // 1️⃣ CONDITIONAL AUTO-REPLY CHECK
+                    if (!empty($formConfig['conditional_reply_enabled'])) {
+
+                        $conditionalField = $formConfig['conditional_field'] ?? null;
+                        $expectedValue = $formConfig['conditional_value'] ?? null;
+
+                        // If missing settings → don't send
+                        if (!$conditionalField || !$expectedValue) {
+                            continue;
+                        }
+
+                        $actualValue = $event->submission->{$conditionalField} ?? null;
+
+
+                    
+                        // If value DOES NOT MATCH → SKIP sending
+                        if ($actualValue != $expectedValue) {
+                            continue;  // <-- THIS STOPS SENDING
+                        }
+                    }
+                    // END CONDITIONAL CHECK
+
                     $submissionNumber = uniqid();
                     $autoReplyData = $formData->toArray();
 

@@ -99,6 +99,29 @@ tabs:
                     max_files: 1
                     width: 50
                     instructions: 'Optional file to attach to the auto-reply email.'
+                -
+                  handle: conditional_reply_enabled
+                  field:
+                    type: toggle
+                    display: 'Conditional Auto Reply Enabled'
+                    width: 100
+                    instructions: 'Enable conditional auto-reply based on field value.'
+                -
+                  handle: conditional_field
+                  field:
+                    type: form_fields
+                    display: 'Conditional Field'
+                    max_items: 1
+                    width: 50
+                    instructions: 'Select the field whose value will determine the auto-reply condition.'
+                -
+                  handle: conditional_value
+                  field:
+                    type: text
+                    display: 'Conditional Value'
+                    width: 50
+                    instructions: 'Auto-reply will only be sent when the selected field matches this value.'
+
               display: ' '
               type: grid
               mode: stacked

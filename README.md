@@ -9,6 +9,10 @@ The Autoreply addon enhances your Statamic forms by automatically sending custom
 3. **Conditional Submission Number Inclusion:** Option to include the submission number in the email if configured. Note: Make sure to create a field with ‘random_id’ as the handle.
 4. **Attachment Support:** Supports attaching files to automatic reply emails.
 5. **Support for Multiple Forms:** Configure automatic replies for multiple forms within your Statamic site.
+6. **NEW: Conditional Auto-Reply Logic (Smart Responses):**
+   Automatically send replies *only when specific field values match your rules*.  
+   Perfect for routing inquiries, VIP customers, or category-based responses—giving you smarter, more personalized communication.
+
 
 ## Screenshots
 
@@ -16,6 +20,12 @@ The Autoreply addon enhances your Statamic forms by automatically sending custom
 ![Autoreply Configuration](docs/autoreply_screen_2.png)
 ![Autoreply Email](docs/email_screen.png)
 
+
+## What's New in v1.2.0
+
+- ✨ **Conditional Auto-Reply:** Create dynamic, rule-based responses based on any form field.
+
+![Conditional Auto-Reply](docs/conditional_reply.png)
 
 ## Installation
 
